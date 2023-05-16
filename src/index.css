@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+.navmenu{
+  left:-100%;
+  transition:850ms;
+}
+.navmenu.active{
+  left:0;
+  transition: 450ms;
+}
+.linkblue{
+  position: relative;
+}
+.linkblue::after{
+  content:'';
+  width:50px;
+  scale:0 1;
+  border: 2px solid #15273C;
+  position: absolute;
+  left:0;
+  bottom:-12px;
+  transition: scale 750ms;
+}
+.linkblue:hover::after{
+  scale:1;
+}
+.linkwhite{
+  position: relative;
+}
+.linkwhite::after{
+  content:'';
+  width:100%;
+  scale:0 1;
+  border: 1px solid #FFFFFF;
+  position: absolute;
+  left:0;
+  bottom:-8px;
+  transition: scale 750ms;
+}
+.linkwhite:hover::after{
+  scale:1;
+}
+
