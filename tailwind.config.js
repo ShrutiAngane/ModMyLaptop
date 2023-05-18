@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily:{
+      'brand':['Rajdhani', 'sans-serif']
+    },
     extend: {
       transitionProperty: {
         'width': 'width'

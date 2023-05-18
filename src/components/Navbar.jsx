@@ -16,7 +16,7 @@ const Navbar = () => {
     }
   return (
     <div>
-        <nav className='flex flex-row-reverse md:flex md:flex-row w-[100%] pl-[1.5em] pr-[1.5em] justify-between items-center bg-[#15273C]'>
+        <nav className='flex flex-row-reverse md:flex md:flex-row w-[100%] pl-[1.5em] pr-[1.5em] justify-between items-center bg-[#15273C] z-10'>
             <div>
                 <img src={logo} alt='modmylaptop' className='w-[115px]'></img>
             </div>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @tailwind base;
 @tailwind components;
@@ -49,5 +50,24 @@
 }
 .linkwhite:hover::after{
   scale:1;
+}
+.liquidmetal{
+  background-color: #D81C33;
+  color:#020408;
+}
+.Recommended{
+  background-color: #3FC33D;
+  color:#FFFFFF;
+}
+.Value{
+  background-color: #E7EF31;
+  color:#020408;
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background-color: rgba(0,0,0,.4);
+  top: 114px;
 }
 
