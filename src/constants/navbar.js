@@ -16,19 +16,19 @@ export const navlinks=[
     {
         id:3,
         text:'Services',
-        path:'/services',
+        path:[{id:'service'}],
         icon: BsCpuFill
     },
     {
         id:4,
         text:'Pricing',
-        path:'/pricing',
+        path:[{id:'pricing'}],
         icon: BsCoin
     },
     {
         id:5,
         text:'Contact Us',
-        path:'/contact',
+        path:[{id:'contact'}],
         icon: BsFillTelephoneFill
     },
     {

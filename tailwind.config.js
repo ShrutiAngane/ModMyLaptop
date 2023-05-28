@@ -24,6 +24,7 @@ export default {
       md:'768px',
       xl:'1280px',
       '2xl':'1536px',
+      '3xl':'1700px',
     },
     keyframes:{
      

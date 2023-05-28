@@ -2,11 +2,11 @@ import React from 'react'
 import ServiceCard from '../components/ServiceCard'
 import { service } from '../constants/service'
 import Button from '../components/Button'
-import Fade from 'react-reveal/Fade';
+
 
 const Services = () => {
   return (
-    <Fade left><div className='flex flex-col w-[100%] items-center gap-7'>
+   <div className='flex flex-col w-[100%] items-center gap-7' id='service'>
         <h3 className='text-[#15273c] text-[1.5rem] font-bold'>Our Services</h3>
         <div className='flex flex-col items-center gap-10 lg:justify-center w-[100%] lg:flex-row'>
             {service.map((element)=>{
@@ -14,9 +14,8 @@ const Services = () => {
             })}
         </div> 
         
-        <Button text={'Checkout our Plans'}/>
+        <Button text={'Checkout our Plans'} smooth={true} href={''}/>
     </div>
-    </Fade>
   )
 }
 
