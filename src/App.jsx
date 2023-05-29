@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Footer from "./components/Footer"
+import WhatWeDo from "./pages/WhatWeDo"
 
 export const toggleContext=createContext()
 
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/whatwedo" element={<WhatWeDo/>}/>
         </Routes>
         <Footer/>
         </toggleContext.Provider>

@@ -9,17 +9,17 @@ import { toggleContext } from '../App';
 
 
 const Navbar = () => {
-    const[isAbout,setAbout]=useState(false)
+    const[navpos,setNavPos]=useState(false)
     const {toggle,handleToggle}=useContext(toggleContext)
     const nav=useRef(null)
     document.body.style.zIndex='0'
     function handleNavClick(data){
-        data.id=='2'?setAbout(true):setAbout(false);
+        data.id!='1'?setNavPos(true):setNavPos(false);
         handleToggle()
     }
   return (
     <div>
-        <nav className={`flex flex-row-reverse ${isAbout?'':'fixed'} md:flex md:flex-row w-[100%] pl-[1.5em] pr-[1.5em] pt-3 pb-3 justify-between items-center bg-[#15273C] z-10`}>
+        <nav className={`flex flex-row-reverse ${navpos?'':'fixed'} md:flex md:flex-row w-[100%] pl-[1.5em] pr-[1.5em] pt-3 pb-3 justify-between items-center bg-[#15273C] z-10`}>
             <div>
                 <img src={logo} alt='modmylaptop' className='w-[50px] z-10'></img>
             </div>
@@ -28,7 +28,7 @@ const Navbar = () => {
             </div>
             <ul className={`hidden md:flex md:items-center gap-4 lg:gap-8`}>
                 {navlinks.map((element)=>{
-                    return typeof(element.path)=='string'?<NavLink to={element.path} className='text-[#FFFFFF]  font-semibold md:text-[1rem] lg:text-[1.2rem] linkwhite' key={element.id} onClick={()=>element.id=='2'?setAbout(true):setAbout(false)}>{element.text}</NavLink>:
+                    return typeof(element.path)=='string'?<NavLink to={element.path} className='text-[#FFFFFF]  font-semibold md:text-[1rem] lg:text-[1.2rem] linkwhite' key={element.id} onClick={()=>element.id!='1'?setNavPos(true):setNavPos(false)}>{element.text}</NavLink>:
                     <Link to={element.path[0].id} smooth={true} offset={-130} duration={1000} className='text-[#FFFFFF]  font-semibold md:text-[1rem] lg:text-[1.2rem] linkwhite hover:cursor-pointer' key={element.id}>{element.text}</Link>
 
 

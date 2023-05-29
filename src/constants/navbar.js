@@ -34,7 +34,7 @@ export const navlinks=[
     {
         id:6,
         text:'What we do?',
-        path:'/images',
+        path:'/whatwedo',
         icon: BsQuestionOctagonFill
     }
 ]

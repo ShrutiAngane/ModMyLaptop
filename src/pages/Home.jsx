@@ -8,6 +8,7 @@ import Testimonials from './Testimonials'
 import { BsChevronDoubleDown } from "react-icons/bs";
 import { Link } from 'react-scroll'
 import { toggleContext } from '../App'
+import Animate from '../utility/animations/Animate'
 
 
 
@@ -29,17 +30,19 @@ const Home = () => {
         </div>
       </div>
       <div className='flex flex-col w-[100%] items-center'>
-        <Services/>
+        <Animate>
+          <Services/>
+        </Animate>
       </div>
-      <div className=''>
-        <Repaste/>
+      <div>
+        <Animate><Repaste/></Animate>
       </div>
-      <Testimonials/>
+      <Animate><Testimonials/></Animate>
       <div className='flex flex-col w-[100%] items-center'>
-        <Pricing/>
+        <Animate><Pricing/></Animate>
       </div>
       <div className='flex flex-col w-[100%] items-center'>
-        <Contact/>
+        <Animate><Contact/></Animate>
       </div>
       
 
