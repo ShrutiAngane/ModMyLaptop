@@ -2,7 +2,6 @@ import React from 'react'
 import { testimonials } from '../constants/testimonials'
 import TestimonialCard from '../components/TestimonialCard'
 
-
 const Testimonials = () => {
   return (
     <div className='w-[100%] flex flex-col items-center gap-7'>
@@ -15,5 +14,4 @@ const Testimonials = () => {
     </div>
   )
 }
-
 export default Testimonials

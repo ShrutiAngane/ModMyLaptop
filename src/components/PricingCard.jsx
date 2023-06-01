@@ -16,5 +16,4 @@ const PricingCard = ({data}) => {
     </div>
   )
 }
-
 export default PricingCard

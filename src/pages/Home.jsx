@@ -1,15 +1,16 @@
 import React, { useContext } from 'react'
 import videobg from '../assets/Stock_mobo.mp4'
-import Services from './Services'
-import Repaste from './Repaste'
-import Pricing from './Pricing'
-import Contact from './Contact'
-import Testimonials from './Testimonials'
 import { BsChevronDoubleDown } from "react-icons/bs";
 import { Link } from 'react-scroll'
 import { toggleContext } from '../App'
 import Animate from '../utility/animations/Animate'
+import { lazy,Suspense } from 'react'
 
+const Services=lazy(()=>import('./Services'))
+const Repaste=lazy(()=>import('./Repaste'))
+const Pricing=lazy(()=>import('./Pricing'))
+const Contact=lazy(()=>import('./Contact'))
+const Testimonials=lazy(()=>import('./Testimonials'))
 
 
 const Home = () => {
@@ -29,24 +30,17 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className='flex flex-col w-[100%] items-center'>
-        <Animate>
-          <Services/>
-        </Animate>
+      <div className='flex flex-col w-[100%] items-center gap-[120px]'>
+        <Suspense fallback={<h2 className='w-[100%] text-center flex justify-center items-center'>Loading...</h2>}>
+          <Animate>
+            <Services/>
+          </Animate>
+          <Animate><Repaste/></Animate>
+          <Animate><Testimonials/></Animate>
+          <Animate><Pricing/></Animate>
+          <Animate><Contact/></Animate>
+        </Suspense>
       </div>
-      <div>
-        <Animate><Repaste/></Animate>
-      </div>
-      <Animate><Testimonials/></Animate>
-      <div className='flex flex-col w-[100%] items-center'>
-        <Animate><Pricing/></Animate>
-      </div>
-      <div className='flex flex-col w-[100%] items-center'>
-        <Animate><Contact/></Animate>
-      </div>
-      
-
-      
     </div>
   )
 }

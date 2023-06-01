@@ -1,4 +1,4 @@
-import { BsFillBrushFill,BsCpuFill,BsEyedropper,BsGear,BsTools } from "react-icons/bs";
+import {BsEyedropper,BsGear} from "react-icons/bs";
 import { MdCleaningServices } from "react-icons/md";
 export const service=[
     {

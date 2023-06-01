@@ -7,5 +7,4 @@ const Tag = ({text,bg}) => {
     </div>
   )
 }
-
 export default Tag
