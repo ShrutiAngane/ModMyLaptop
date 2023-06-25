@@ -10,7 +10,7 @@ export const navlinks=[
     {
         id:2,
         text:'About Us',
-        path:'/About',
+        path:'/about',
         icon: BsPcDisplayHorizontal
     },
     {

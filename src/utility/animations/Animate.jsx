@@ -16,7 +16,7 @@ const Animate = ({children}) => {
     <div className='w-[100%]' ref={ref}>
       <motion.div
       variants={{
-        hidden:{opacity: 0,y:-170},
+        hidden:{opacity: 0,y:-120},
         visible:{opacity: 1,y:0},
       }}
       initial='hidden'
