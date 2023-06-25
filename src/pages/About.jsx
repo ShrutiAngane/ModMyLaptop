@@ -17,14 +17,12 @@ const About = () => {
             googleMapsApiKey:import.meta.env.VITE_MAP_API_KEY,
         });
   return (
-    <div className={`max-w-[100%] flex flex-col items-center pt-[150px] pb-[150px] pl-[10%] pr-[10%] gap-[100px] ${toggle?'blurred':''}`}>
+    <div className={`max-w-[100%] flex flex-col items-center pt-[150px] pb-[80px] pl-[10%] pr-[10%] gap-[100px] ${toggle?'blurred':''}`}>
         <Animate>
             <section className='flex flex-col-reverse lg:flex lg:flex-row w-[100%] justify-between gap-5 bg-[#DFDFDF] p-[6%] lg:p-[3%]'>
-                <ul className='flex flex-col gap-5 lg:w-[50%]'>
+                <ul className='flex flex-col justify-evenly gap-3 lg:gap-0 lg:w-[50%]'>
                     <li className='text-[0.8rem] xs:text-[1rem] 2xl:text-[1.2rem] text-[#020408] list-none'>ModMyLaptop aims to provide quality service at affordable prices for laptop users.</li>
                     <li className='text-[0.8rem] xs:text-[1rem] 2xl:text-[1.2rem] text-[#020408] list-none'>High performance and cost-effective services have become a necessity with the ever-increasing demand and usage of laptops.</li>
-                    <li className='text-[0.8rem] xs:text-[1rem] 2xl:text-[1.2rem] text-[#020408] list-none'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, dignissimos.</li>
-                    <li className='text-[0.8rem] xs:text-[1rem] 2xl:text-[1.2rem] text-[#020408] list-none'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure placeat aliquam harum ducimus provident! Error fugiat neque ducimus nesciunt beatae.</li>
                     <li className='text-[0.8rem] xs:text-[1rem] 2xl:text-[1.2rem] text-[#020408] list-none'>We have various mods & products coming up soon, so make sure you are connected with us through our social media handles.</li>
                 </ul>
                     <div className=''>
@@ -49,7 +47,7 @@ const About = () => {
                         {socials.map((element)=>{
                             return <div key={element.id} className='flex gap-2 hover:cursor-pointer'>
                                 <span>{<element.icon style={{width:'30px',height:'30px'}}/>}</span>
-                                <li className='list-none text-[0.8rem] xs:text-[1rem] 2xl:text-[1.2rem] text-[#020408] hover:font-bold'>{element.text}</li>
+                                <li className='list-none text-[0.8rem] xs:text-[1rem] 2xl:text-[1.2rem] text-[#020408] hover:font-bold'><a href={element.link} target='_blank'>{element.text}</a></li>
                             </div>
                             
                         })}

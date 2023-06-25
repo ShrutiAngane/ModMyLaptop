@@ -6,21 +6,25 @@ export const socials=[
     {
         id:1,
         text:'Linkedin',
-        icon: Linkedin
+        icon: Linkedin,
+        link:'https://www.linkedin.com/company/modmylaptop/about/'
     },
     {
         id:2,
         text:'Youtube',
-        icon: Youtube
+        icon: Youtube,
+        link:'https://www.youtube.com/channel/UC7PPNO4MpZrl7hrzbya3X6w'
     },
     {
         id:3,
         text:'Twitter',
-        icon: Twitter
+        icon: Twitter,
+        link:'https://twitter.com/modmylaptop'
     },
     {
         id:4,
         text:'Instagram',
-        icon: Instagram
+        icon: Instagram,
+        link:'https://www.instagram.com/modmylaptop/'
     }
 ]
